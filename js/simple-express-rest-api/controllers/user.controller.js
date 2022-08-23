@@ -1,18 +1,19 @@
 import { success, failure} from '../helpers/response.js';
+import restify from 'restify';
 
 let users = {
 	1: {
 		'id': 1,
 		'firstName': 'Maya',
 		'lastName': 'Douglas',
-		'email': 'me@mayacdouglas.com'
+		'email': 'mayacdouglas@gmail.com'
 	}
 	
 };
 let max_user_id = 1;
 
 const userController = (server) => {
-	
+	server.pre(restify.plugins.pre.dedupeSlashes());
 	server.get('/', (req, res, next) => {
 		success(res, next, users);
 	});
