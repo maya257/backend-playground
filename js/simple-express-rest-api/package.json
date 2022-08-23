@@ -27,8 +27,10 @@
   },
   "homepage": "https://github.com/mcrd25/backend-playground#readme",
   "dependencies": {
+    "formidable": "^2.0.1",
     "nodemon": "^2.0.6",
     "restify": "^8.5.1",
-    "restify-validator": "^0.3.1"
+    "restify-validator": "^0.3.1",
+    "uuid": "^8.3.2"
   }
 }
